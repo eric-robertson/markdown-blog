@@ -1,5 +1,5 @@
 node_modules
-html/*
+html
 commentKey.txt
-src/posts/*
-src/images/*
+src/posts
+src/images
