@@ -1,0 +1,29 @@
+{
+  "name": "engine-blog",
+  "version": "1.0.0",
+  "description": "engine to run a blog built with markdown",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orcus50/engine-blog.git"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "eric-robertson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orcus50/engine-blog/issues"
+  },
+  "homepage": "https://github.com/orcus50/engine-blog#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs-extra": "^8.1.0",
+    "sass": "^1.23.0",
+    "showdown": "^1.9.0"
+  }
+}
