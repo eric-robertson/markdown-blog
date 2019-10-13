@@ -58,6 +58,8 @@ post_names.forEach( post => {
 
     // Combine it all together
     let final_page_html = [header, html_output, comments, footer].join('\n');
+    if (key == 'no-comments')
+        final_page_html = [header, html_output, footer].join('\n');
 
     // Export it
     let output_path = html_dir + post + '.html'

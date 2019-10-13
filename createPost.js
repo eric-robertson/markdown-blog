@@ -21,3 +21,6 @@ site_format_json['posts'].push(insert_info)
 // Save Data
 let raw_output = JSON.stringify(site_format_json, null, 2)
 fs.writeFileSync(target_file, raw_output);
+
+// Call generate
+require('./generate.js')

@@ -1,3 +1,9 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "date": "2019-10-13",
+      "link": "sample",
+      "title": "New Post"
+    }
+  ]
 }
