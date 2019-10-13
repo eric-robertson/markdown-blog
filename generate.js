@@ -12,6 +12,11 @@ let converter = new showdown.Converter()
 let src_dir = './src/'
 let html_dir = './html/'
 
+/* Make sure dirs exists */
+fsx.ensureDirSync(html_dir)
+fsx.ensureDirSync(src_dir + 'images')
+fsx.ensureDirSync(src_dir + 'posts')
+
 /* Utils */
 
 let loadHtmlSnippet = function ( name ) {
@@ -33,10 +38,13 @@ fs.writeFileSync( html_dir + 'style.css', result )
 
 let post_names = fs.readdirSync( src_dir + 'posts' )
 
+// Get site key for comments (not sunk to git for security). gotten here : https://app.getreplybox.com/
+let key = fs.readFileSync( 'commentKey.txt', 'utf8' )
+
 // Snippets for pages
 let header = loadHtmlSnippet('header')
 let footer = loadHtmlSnippet('footer')
-let comments = loadHtmlSnippet('comments')
+let comments = loadHtmlSnippet('comments').replace('KEYHERE', key)
 
 post_names.forEach( post => {
 
@@ -47,7 +55,6 @@ post_names.forEach( post => {
     let file_path = src_dir + 'posts/' + post + '.md'
     let file_content = fs.readFileSync( file_path, 'utf8' )
     let html_output = converter.makeHtml(file_content)
-
 
     // Combine it all together
     let final_page_html = [header, html_output, comments, footer].join('\n');
