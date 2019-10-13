@@ -3,8 +3,7 @@
 var express = require('express');
 var app = express();
 
-app.use('', express.static('HTML'));
-app.use('/site-format', express.static('site-format.json'))
+app.use('', express.static('html'));
 
 /* Start the server */
 console.log('Server started')
