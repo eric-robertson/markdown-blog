@@ -39,7 +39,7 @@ fs.writeFileSync( html_dir + 'style.css', result )
 let post_names = fs.readdirSync( src_dir + 'posts' )
 
 // Get site key for comments (not sunk to git for security). gotten here : https://app.getreplybox.com/
-let key = fs.readFileSync( 'commentKey.txt', 'utf8' )
+let key = fs.readFileSync( 'commentKey.txt', 'utf8' ).trim()
 
 // Snippets for pages
 let header = loadHtmlSnippet('header')
