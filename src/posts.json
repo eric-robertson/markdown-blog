@@ -1,9 +1,3 @@
 {
-  "posts": [
-    {
-      "date": "2019-10-13",
-      "link": "blog-created",
-      "title": "Creation of this blog"
-    }
-  ]
+  "posts": []
 }
